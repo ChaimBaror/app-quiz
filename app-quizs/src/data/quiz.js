@@ -235,21 +235,6 @@
                 "answer": "First Temple"
             },
             {
-                "question": "Which religious festival is celebrated annually by Jews to commemorate the rededication of the Second Temple in Jerusalem?",
-                "options": ["Passover", "Yom Kippur", "Hanukkah", "Purim"],
-                "answer": "Hanukkah"
-            },
-            {
-                "question": "What is the significance of the Church of the Holy Sepulchre in Jerusalem?",
-                "options": ["Site of Jesus' crucifixion", "Site of Jesus' burial", "Site of Jesus' resurrection", "All of the above"],
-                "answer": "All of the above"
-            },
-            {
-                "question": "What is the name of the ancient fortress in Jerusalem that has been a symbol of Jewish resistance and is now a national monument?",
-                "options": ["Tower of David", "Masada", "Herodium", "Megiddo"],
-                "answer": "Masada"
-            },
-            {
                 "question": "Which prominent neighborhood in Jerusalem is known for its large population of English-speaking immigrants?",
                 "options": ["Givat Shaul", "Talpiot", "Har Nof", "French Hill"],
                 "answer": "Har Nof"
@@ -274,7 +259,7 @@
                 "options": ["Mea Shearim", "Givat Shaul", "Har Nof", "Ramat Eshkol"],
                 "answer": "Har Nof"
             },
-                     {
+            {
                         "question": "What's the capital of France?",
                         "options": ["Paris", "Marseille", "Lyon", "Toulouse"],
                         "answer": "Paris"
