@@ -3,9 +3,10 @@ import { getQuestionData, QuestionData } from '../services/quiz-service';
 import './quiz-style.css';
 import { question } from '../data/quiz.js';
 import { generateRandomQuiz } from '../utils/utlis';
+import QuizCategory from './Quiz_Category';
 
 const Quiz = () => {
-    const [listquestion, setListQuestion] = useState<QuestionData[]>(question);
+    const [listquestion, setListQuestion] = useState<QuestionData[]>(question.splice(0, 10));
     const [quiz, setQuiz] = useState<QuestionData | null>(null);
     const [indexQuestion, setIndexQuestion] = useState(0);
     const [isCorrect, setIsCorrect] = useState(false);
@@ -13,16 +14,19 @@ const Quiz = () => {
     const [myScore, setScore] = useState(0);
     const [clicked, setClicked] = useState<any[]>([])
     const [newQuiz, setNewQuiz] = useState(false);
+    const [category, setCategory] = useState('A');
+
 
     useEffect(() => {
         setQuiz(listquestion[indexQuestion]);
         setClicked([]);
-    }, [indexQuestion]);
+    }, [indexQuestion, category]);
+
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const data = await getQuestionData();
+                const data = await getQuestionData({ category: category });
                 setListQuestion(data);
                 setIndexQuestion(0)
             } catch (error) {
@@ -31,7 +35,7 @@ const Quiz = () => {
         };
 
         fetchData();
-    }, [newQuiz]);
+    }, [newQuiz, category]);
 
     const getLocal = () => {
         const quizlocal = generateRandomQuiz(question)
@@ -63,7 +67,7 @@ const Quiz = () => {
         setScore((prevScore) => (isCorrect ? prevScore + 10 : prevScore - 2));
         isCorrect && setTimeout(handleNext, 1000);
     };
-    
+
 
     useEffect(() => {
         if (isDisplay) {
@@ -75,54 +79,57 @@ const Quiz = () => {
     }, [isDisplay]);
 
     return (
-        <div className="quiz">
-            <div className="title">Quiz</div>
-            <div className="lengthQuestion">Question {indexQuestion + 1} / {listquestion.length}</div>
-            {indexQuestion === listquestion.length - 1 && (
-                <div className='box'>
-                    <div className="score">Score: {myScore}</div>
-                    <div className='towButton'>
-                        <button onClick={() => setNewQuiz(!newQuiz)}>New Quiz AI</button>
-                        <button onClick={getLocal}>New Quiz off-line</button>
+        <>
+            <QuizCategory setCategory={setCategory} category={category} />
+            <div className="quiz">
+                <div className="title">Quiz {category}</div>
+                <div className="lengthQuestion">Question {indexQuestion + 1} / {listquestion.length}</div>
+                {indexQuestion === listquestion.length - 1 && (
+                    <div className='box'>
+                        <div className="score">Score: {myScore}</div>
+                        <div className='towButton'>
+                            <button onClick={() => setNewQuiz(!newQuiz)}>New Quiz AI</button>
+                            <button onClick={getLocal}>New Quiz off-line</button>
+                        </div>
+                    </div>
+                )}
+                <div className="towButton">
+                    <button disabled={indexQuestion === 0} className="buttonNext" onClick={handlePrev}>
+                        Prev
+                    </button>
+                    <button
+                        disabled={indexQuestion === listquestion.length - 1}
+                        className="buttonNext"
+                        onClick={handleNext}
+                    >
+                        Next
+                    </button>
+                </div>
+                <div>
+                    <div className="box question">{quiz?.question}</div>
+                    <div>
+                        {quiz?.options.map((answer, index) => (
+                            <div key={index} >
+                                {index + 1}.
+                                <button
+                                    disabled={clicked.includes(index)}
+                                    key={index}
+                                    className={`buttonQuiz`}
+                                    onClick={() => clickAnswers(answer, index)}
+                                >
+                                    {answer}
+                                </button>
+                            </div>
+                        ))}
                     </div>
                 </div>
-            )}
-            <div className="towButton">
-                <button disabled={indexQuestion === 0} className="buttonNext" onClick={handlePrev}>
-                    Prev
-                </button>
-                <button
-                    disabled={indexQuestion === listquestion.length - 1}
-                    className="buttonNext"
-                    onClick={handleNext}
-                >
-                    Next
-                </button>
+                {isDisplay && (
+                    <div className={`isCorrect box ${isCorrect ? 'correct' : 'incorrect'}`}>
+                        {isCorrect ? 'Correct' : 'Incorrect'}
+                    </div>
+                )}
             </div>
-            <div>
-                <div className="box question">{quiz?.question}</div>
-                <div>
-                    {quiz?.options.map((answer, index) => (
-                        <div key={index} >
-                            {index + 1}.
-                            <button
-                                disabled={clicked.includes(index)}
-                                key={index}
-                                className={`buttonQuiz`}
-                                onClick={() => clickAnswers(answer, index)}
-                            >
-                                {answer}
-                            </button>
-                        </div>
-                    ))}
-                </div>
-            </div>
-            {isDisplay && (
-                <div className={`isCorrect box ${isCorrect ? 'correct' : 'incorrect'}`}>
-                    {isCorrect ? 'Correct' : 'Incorrect'}
-                </div>
-            )}
-        </div>
+        </>
     );
 };
 
