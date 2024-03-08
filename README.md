@@ -1,1 +1,1 @@
-## [quiz](https://app-quiz-v5iw.vercel.app)
+## [Quiz.app](https://app-quiz-v5iw.vercel.app)
