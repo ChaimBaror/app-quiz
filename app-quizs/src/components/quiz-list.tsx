@@ -43,6 +43,8 @@ const Quiz = () => {
     useEffect(() => {
         setQuiz(listquestion[indexQuestion]);
         setClicked([]);
+        setScore(0)
+        setIsCorrect(false)
     }, [indexQuestion, category, listquestion]);
 
     // Check if answer is correct and update score

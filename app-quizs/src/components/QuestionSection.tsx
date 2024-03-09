@@ -12,7 +12,7 @@ type Props = {
 
 const QuestionSection = ({ quiz, clicked, clickAnswers, isDisplay, isCorrect }: Props) => (
     <div>
-        <div className="box question">{quiz?.question}</div>
+        <div className={`box question ${isCorrect ? 'correct' : ''}`}>{quiz?.question}</div>
         <div className="lengthQuestion">
             {quiz?.options.map((answer, index) => (
                 <div key={index} >
