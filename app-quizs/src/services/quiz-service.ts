@@ -1,6 +1,7 @@
 
 import exp from "constants";
 import { type } from "os";
+import { apiUrl } from "./apiUrl";
 
 export type QuestionData = {
   question: string;
@@ -12,7 +13,7 @@ export const getQuestionData = async ({ amount = 10, category = 'A', difficulty 
 
 
   try {
-    const response = await fetch(`https://server-quiz-eosin.vercel.app/api/quiz?amount=${amount}&category=${category}&difficulty=${difficulty}&type=${type}`);
+    const response = await fetch(`${apiUrl}/quiz?amount=${amount}&category=${category}&difficulty=${difficulty}&type=${type}`);
 
     if (!response.ok) {
       // Handle error if the response status is not OK
@@ -32,7 +33,7 @@ export const getQuestionData = async ({ amount = 10, category = 'A', difficulty 
 
 export const getCategoryList = async (): Promise<any[]> => {
   try {
-    const response = await fetch('http://localhost:8080/api/quiz/categories');
+    const response = await fetch(`${apiUrl}/quiz/categories`);
     if (!response.ok) {
       // Handle error if the response status is not OK
       throw new Error(`HTTP error! Status: ${response.status}`);
