@@ -14,6 +14,323 @@
             "category": "C",
             "questions": "some_questions",
             "name": "Some Questions"
+        },
+        {
+            "category": "D",
+            "questions": "developed",
+            "name": "Developed"
+        }
+    ],
+    "developed": [
+        {
+            "question": "Which programming language was created by James Gosling at Sun Microsystems in the mid-1990s?",
+            "options": [
+                "Java",
+                "C++",
+                "Python",
+                "Ruby"
+            ],
+            "answer": "Java"
+        },
+        {
+            "question": "What year was the first version of the Java programming language released?",
+            "options": [
+                "1995",
+                "2000",
+                "1985",
+                "2005"
+            ],
+            "answer": "1995"
+        },
+        {
+            "question": "Who is the inventor of the C++ programming language?",
+            "options": [
+                "Bjarne Stroustrup",
+                "Dennis Ritchie",
+                "Linus Torvalds",
+                "James Gosling"
+            ],
+            "answer": "Bjarne Stroustrup"
+        },
+        {
+            "question": "Which of the following is not a version control system?",
+            "options": [
+                "Git",
+                "Mercurial",
+                "Subversion",
+                "Apache"
+            ],
+            "answer": "Apache"
+        },
+        {
+            "question": "What does 'API' stand for in the context of software development?",
+            "options": [
+                "Application Programming Interface",
+                "Automated Program Invocation",
+                "Advanced Programming Interface",
+                "Application Program Integration"
+            ],
+            "answer": "Application Programming Interface"
+        },
+        {
+            "question": "Which company developed the Python programming language?",
+            "options": [
+                "Guido van Rossum",
+                "Google",
+                "Microsoft",
+                "Facebook"
+            ],
+            "answer": "Guido van Rossum"
+        },
+        {
+            "question": "Which programming language is often used for developing web applications and is known for its simplicity and readability?",
+            "options": [
+                "Python",
+                "JavaScript",
+                "Ruby",
+                "PHP"
+            ],
+            "answer": "Python"
+        },
+        {
+            "question": "What is the name of the package manager commonly used in JavaScript development?",
+            "options": [
+                "npm",
+                "pip",
+                "Composer",
+                "Maven"
+            ],
+            "answer": "npm"
+        },
+        {
+            "question": "Who is the creator of the programming language Perl?",
+            "options": [
+                "Larry Wall",
+                "Guido van Rossum",
+                "Brendan Eich",
+                "Anders Hejlsberg"
+            ],
+            "answer": "Larry Wall"
+        },
+        {
+            "question": "Which software development methodology emphasizes continuous integration, automated testing, and rapid delivery of small increments of functionality?",
+            "options": [
+                "DevOps",
+                "Kanban",
+                "Scrum",
+                "Extreme Programming (XP)"
+            ],
+            "answer": "DevOps"
+        },
+        {
+            "question": "What is the term for a software design pattern that separates the presentation layer, the business logic, and the data access layer?",
+            "options": [
+                "MVC (Model-View-Controller)",
+                "MVVM (Model-View-ViewModel)",
+                "MVP (Model-View-Presenter)",
+                "Singleton"
+            ],
+            "answer": "MVC (Model-View-Controller)"
+        },
+        {
+            "question": "What is the difference between '==', '===', and '!=' operators in JavaScript?",
+            "options": [
+                "Equality, strict equality, and inequality",
+                "Assignment, equality, and inequality",
+                "Identity, equality, and inequality",
+                "Comparison, strict comparison, and non-equality"
+            ],
+            "answer": "Equality, strict equality, and inequality"
+        },
+        {
+            "question": "Which programming language is often used for building scalable web applications and was developed by Ryan Dahl?",
+            "options": [
+                "Python",
+                "Ruby",
+                "JavaScript",
+                "Node.js"
+            ],
+            "answer": "Node.js"
+        },
+        {
+            "question": "What does the acronym 'REST' stand for in the context of web services?",
+            "options": [
+                "Representational State Transfer",
+                "Remote Execution Service Toolkit",
+                "Resourceful Endpoint Structuring Technique",
+                "Rapid Enterprise Service Transformation"
+            ],
+            "answer": "Representational State Transfer"
+        },
+        {
+            "question": "Who is the creator of the Ruby programming language?",
+            "options": [
+                "Yukihiro Matsumoto",
+                "Guido van Rossum",
+                "Larry Wall",
+                "Brendan Eich"
+            ],
+            "answer": "Yukihiro Matsumoto"
+        },
+        {
+            "question": "What is the purpose of Docker in software development?",
+            "options": [
+                "Containerization",
+                "Version Control",
+                "Database Management",
+                "User Interface Design"
+            ],
+            "answer": "Containerization"
+        },
+        {
+            "question": "What is the name of the programming paradigm in which functions are treated as first-class citizens?",
+            "options": [
+                "Functional Programming",
+                "Procedural Programming",
+                "Object-Oriented Programming",
+                "Imperative Programming"
+            ],
+            "answer": "Functional Programming"
+        },
+        {
+            "question": "Which data structure follows the Last In, First Out (LIFO) principle?",
+            "options": [
+                "Stack",
+                "Queue",
+                "Heap",
+                "Linked List"
+            ],
+            "answer": "Stack"
+        },
+        {
+            "question": "What does the acronym 'HTTP' stand for in web development?",
+            "options": [
+                "Hypertext Transfer Protocol",
+                "Hyperlink Text Transfer Protocol",
+                "Hypertext Transmission Protocol",
+                "Hyperlink Transmission Protocol"
+            ],
+            "answer": "Hypertext Transfer Protocol"
+        },
+        {
+            "question": "Who is the founder of the software company SpaceX and Tesla Motors?",
+            "options": [
+                "Elon Musk",
+                "Jeff Bezos",
+                "Bill Gates",
+                "Mark Zuckerberg"
+            ],
+            "answer": "Elon Musk"
+        },
+        {
+            "question": "What is the term for a software design pattern that allows objects to communicate without knowing the details of each other's implementation?",
+            "options": [
+                "Observer",
+                "Decorator",
+                "Facade",
+                "Mediator"
+            ],
+            "answer": "Mediator"
+        },
+        {
+            "question": "What does the 'HTTP' stand for in the context of web development?",
+            "options": [
+                "Hypertext Transfer Protocol",
+                "HyperText Markup Protocol",
+                "Hyperlink Text Transfer Protocol",
+                "Hypertext Markup Transfer Protocol"
+            ],
+            "answer": "Hypertext Transfer Protocol"
+        },
+        {
+            "question": "Which programming language is primarily used for developing iOS applications?",
+            "options": [
+                "Swift",
+                "Java",
+                "Objective-C",
+                "C#"
+            ],
+            "answer": "Swift"
+        },
+        {
+            "question": "What is the term for a software development approach that emphasizes incremental development, where requirements and solutions evolve through collaboration between self-organizing cross-functional teams?",
+            "options": [
+                "Agile",
+                "Waterfall",
+                "Scrum",
+                "Kanban"
+            ],
+            "answer": "Agile"
+        },
+        {
+            "question": "What is the name of the markup language used for structuring and presenting content on the World Wide Web?",
+            "options": [
+                "HTML",
+                "XML",
+                "JSON",
+                "CSS"
+            ],
+            "answer": "HTML"
+        },
+        {
+            "question": "Who developed the programming language C++?",
+            "options": [
+                "Bjarne Stroustrup",
+                "Dennis Ritchie",
+                "Ken Thompson",
+                "Guido van Rossum"
+            ],
+            "answer": "Bjarne Stroustrup"
+        },
+        {
+            "question": "Who is often referred to as the 'father of modern computing'?",
+            "options": [
+                "Alan Turing",
+                "Bill Gates",
+                "Steve Jobs",
+                "Tim Berners-Lee"
+            ],
+            "answer": "Alan Turing"
+        },
+        {
+            "question": "Who developed the Linux kernel?",
+            "options": [
+                "Linus Torvalds",
+                "Richard Stallman",
+                "Tim Berners-Lee",
+                "Guido van Rossum"
+            ],
+            "answer": "Linus Torvalds"
+        },
+        {
+            "question": "What does the acronym 'CSS' stand for in web development?",
+            "options": [
+                "Cascading Style Sheets",
+                "Cross-Scripting Style",
+                "Creative Style Syntax",
+                "Coded Style System"
+            ],
+            "answer": "Cascading Style Sheets"
+        },
+        {
+            "question": "Who co-founded Apple Inc. along with Steve Wozniak?",
+            "options": [
+                "Steve Jobs",
+                "Bill Gates",
+                "Mark Zuckerberg",
+                "Larry Page"
+            ],
+            "answer": "Steve Jobs"
+        },
+        {
+            "question": "Which version control system was developed by Linus Torvalds for Linux kernel development?",
+            "options": [
+                "Git",
+                "Subversion",
+                "Mercurial",
+                "CVS"
+            ],
+            "answer": "Git"
         }
     ],
     "questions": [
