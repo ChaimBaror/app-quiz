@@ -468,66 +468,6 @@
                 "Mount Scopus"
             ],
             "answer": "Mount Moriah"
-        },
-        {
-            "question": "In which city is the Dome of the Rock located, an important Islamic shrine?",
-            "options": [
-                "Tel Aviv",
-                "Jerusalem",
-                "Haifa",
-                "Beersheba"
-            ],
-            "answer": "Jerusalem"
-        },
-        {
-            "question": "Which prominent neighborhood in Jerusalem is known for its large population of English-speaking immigrants?",
-            "options": [
-                "Givat Shaul",
-                "Talpiot",
-                "Har Nof",
-                "French Hill"
-            ],
-            "answer": "Har Nof"
-        },
-        {
-            "question": "What is the name of the synagogue in Har Nof that was targeted in a terrorist attack in 2014?",
-            "options": [
-                "Kehilat Bnei Torah",
-                "Kehilat Yaakov",
-                "Kehilat Moriah",
-                "Kehilat Beit Yisrael"
-            ],
-            "answer": "Kehilat Bnei Torah"
-        },
-        {
-            "question": "In which year did the founding of Har Nof as a residential neighborhood begin?",
-            "options": [
-                "1950s",
-                "1960s",
-                "1970s",
-                "1980s"
-            ],
-            "answer": "1970s"
-        },
-        {
-            "question": "What is the approximate population of Har Nof as of the most recent data available?",
-            "options": [
-                "10,000-15,000",
-                "15,000-20,000",
-                "20,000-25,000",
-                "25,000-30,000"
-            ],
-            "answer": "20,000-25,000"
-        },
-        {
-            "question": "Which neighborhood in Jerusalem is known for its religious community and is located near the western entrance to the city?",
-            "options": [
-                "Mea Shearim",
-                "Givat Shaul",
-                "Har Nof",
-                "Ramat Eshkol"
-            ],
-            "answer": "Har Nof"
         }
     ],
     "some_questions": [
