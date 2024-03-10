@@ -37,13 +37,13 @@ const Quiz = () => {
         };
 
         fetchData();
+        setScore(0)
     }, [category, newQuiz]);
 
     // Update quiz question when indexQuestion or category changes
     useEffect(() => {
         setQuiz(listquestion[indexQuestion]);
         setClicked([]);
-        setScore(0)
         setIsCorrect(false)
     }, [indexQuestion, category, listquestion]);
 
@@ -90,6 +90,7 @@ const Quiz = () => {
         const quizLocal = generateRandomQuiz(question);
         setListQuestion(quizLocal.slice(0, 10));
         setIndexQuestion(0);
+        setScore(0);
     };
 
     return (
