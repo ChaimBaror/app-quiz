@@ -14,7 +14,7 @@ const QuestionSection = ({ quiz, clicked, clickAnswers, isDisplay, isCorrect }: 
     <div>
         <div className={`box question ${isCorrect ? 'correct' : ''}`}>{quiz?.question}</div>
         <div className="lengthQuestion">
-            {quiz?.options.map((answer, index) => (
+            {quiz?.options.sort().map((answer, index) => (
                 <div key={index} >
                     <button
                         disabled={clicked.includes(index)}

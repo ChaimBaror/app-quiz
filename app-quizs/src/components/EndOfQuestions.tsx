@@ -1,12 +1,10 @@
-import React from 'react';
+import React from "react";
 
-const EndOfQuestions = ({ myScore, setNewQuiz, getLocal }: any) => (
-    <div className='box'>
-        <div className="score">Score: {myScore}</div>
-        <div className='towButton'>
-            <button onClick={getLocal}>New Quiz off-line</button>
-        </div>
-    </div>
+const EndOfQuestions = ({ myScore, setNewQuiz }: any) => (
+  <div className="box corsor" onClick={setNewQuiz}>
+    For New Quiz Click
+    <div className="score">Score: {myScore}</div>
+  </div>
 );
 
 export default EndOfQuestions;
