@@ -83,7 +83,7 @@ const Quiz = () => {
     if (isDisplay) {
       const timeoutId = setTimeout(() => {
         setDisplay(false);
-      }, 3000);
+      }, 1000);
       return () => clearTimeout(timeoutId);
     }
   }, [isDisplay]);

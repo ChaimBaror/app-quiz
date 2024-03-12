@@ -1,3 +1,4 @@
+
 .question {
     text-align: center;
     font-size: 40px;
@@ -20,14 +21,17 @@
 }
 
 .isCorrect {
-    padding: 10px;
-    width: 300px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
     border-radius: 5px;
     margin-bottom: 10px;
     font-size: 20px;
     font-weight: bold;
     text-align: center;
-    display: inline-block;
 }
 
 .incorrect {
@@ -39,6 +43,7 @@
 }
 
 .buttonQuiz {
+    border-radius: 25px;
     background-color: #4CAF50;
     /* Green */
     border: none;
@@ -78,6 +83,7 @@
 }
 
 .towButton {
+    border-radius: 15px;
     display: flex;
     text-align: center;
     /* Center the content */
@@ -87,7 +93,10 @@
     justify-content: space-between;
 }
 
+
+
 .buttonNext {
+    border-radius: 15px;
     background-color: #666;
     border: none;
     color: white;
@@ -147,47 +156,57 @@
     top: 10px;
 }
 
-.category {
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: #000000;
-    position: relative;
-    left: 10px;
-    top: 10px;
-}
-
 .menu {
     font-size: 20px;
     font-weight: bold;
     margin-top: 20px;
-    margin-bottom: 20px;
     color: #000000;
-    left: 10px;
     top: 10px;
 }
 
-.categorylist {
-    background: white;
-    /* Green */
-    border: none;
-    color: black;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 10px 5px;
-    cursor: pointer;
-    /* Add cursor style to indicate interactivity */
-}
-
-.categorylist:hover {
-    background-color: #3e8e41;
-}
 
 .active {
     background-color: #00ff00;
     transform: translateY(4px);
+}
+
+.category {
+    position: relative;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.categorySelect {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 8px 30px 8px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.categorySelect:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.categorySelect::after {
+    content: '\25BC';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.categorySelect.active::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.categorySelect option {
+    padding: 8px;
+    font-size: 16px;
 }
